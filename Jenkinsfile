@@ -8,16 +8,17 @@ pipeline {
         stage("Build") { 
             steps {
                 sh "dotnet build HelloJenkins.sln"
-                echo "Building the solution"
             }
         }
         stage("Test") { 
             steps {
+                unstable "Test stage not implemented"
                 echo "Testing the solution"
             }
         }
         stage("Deliver") { 
             steps {
+                unstable "Deliver stage not implemented"
                 echo "Delivering the solution"
             }
         }
