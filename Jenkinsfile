@@ -2,7 +2,7 @@ pipeline {
     agent any 
     triggers { // https://www.jenkins.io/doc/book/pipeline/syntax/#triggers
         cron("* * * * *") // https://en.wikipedia.org/wiki/Cron + https://crontab.guru/
-        pollSCM("* * * *") // https://en.wikipedia.org/wiki/Cron + https://crontab.guru/ 
+        pollSCM("* * * * *") // https://en.wikipedia.org/wiki/Cron + https://crontab.guru/ 
     }
     stages {
         stage("Build") { 
