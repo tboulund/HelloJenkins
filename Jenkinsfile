@@ -36,5 +36,8 @@ pipeline {
         failure {
             echo "Pipeline failed"
         }
+        unstable {
+            echo "Pipeline has completed with warnings"
+        }
     }
 }
