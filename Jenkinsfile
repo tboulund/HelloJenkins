@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage("Build") { 
             steps {
+                sh "dotnet build HelloJenkins.sln"
                 echo "Building the solution"
             }
         }
