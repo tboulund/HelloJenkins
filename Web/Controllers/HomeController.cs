@@ -20,7 +20,7 @@ namespace Web.Controllers
 
         public IActionResult Index()
         {
-            return View(notHere);
+            return View();
         }
 
         public IActionResult Privacy()
