@@ -26,9 +26,7 @@ pipeline {
     post {
         always {
             echo "Pipeline has completed"
-            emailext to: 'thomas887@gmail.com',
-                subject: "Pipeline completed: ${currentBuild.fullDisplayName}",
-                body: "${env.BUILD_URL} has completed"
+            discordSend description: "Jenkins Pipeline Build", footer: "Footer Text", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discordapp.com/api/webhooks/786937940742897674/lOllyP7lhmaMKZ2z2LdhtN-LcdS5oVm422Fg_ouHaqelKYsv4bxJnUSy6uOrYo9Jav0q"
         }
         success {
             echo "Pipeline succeeded"
