@@ -26,7 +26,7 @@ pipeline {
     post {
         always {
             echo "Pipeline has completed"
-            mail to: 'tbmh@easv.dk',
+            emailext to: 'tbmh@easv.dk',
                 subject: "Pipeline completed: ${currentBuild.fullDisplayName}",
                 body: "${env.BUILD_URL} has completed"
         }
